@@ -1,4 +1,73 @@
 
+@import url('https://fonts.googleapis.com/css?family=Inter:700|Poppins:400');
+
+:root{
+  --text: #e7e7ef;
+  --background: #020203;
+  --background-secondary: #020203c0;
+  --primary: #4952a7;
+  --secondary: #21275e;
+  --accent: #2a3798;
+
+  --rounded-border: 5rem;
+}
+:root[data-theme="ligth"] {
+  --text: #101018;
+  --background: #fcfcfd;
+  --background: #fcfcfdc0;
+  --primary: #5862b6;
+  --secondary: #a1a7de;
+  --accent: #6774d5;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  transition: all 0.15s ease;
+}
+
+html, body {
+  background-color: var(--background);
+}
+
+body {
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Inter';
+  font-weight: 700;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 2.489rem; /* 39.84px */}
+
+h2 {font-size: 2.074rem; /* 33.12px */}
+
+h3 {font-size: 1.728rem; /* 27.68px */}
+
+h4 {font-size: 1.440rem; /* 23.04px */}
+
+h5 {font-size: 1.200rem; /* 19.2px */}
+
+small {font-size: 0.833rem; /* 13.28px */}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+footer{
+  padding: 1rem 0.5rem;
+  background-color: var(--background);
+  border-top: 1px solid var(--text);
+}
+
 .container{
   @media screen and (min-width: 1280px) {
     max-width: 1200px;
@@ -12,32 +81,161 @@
   }
 }
 
-.nav-menu {
-  @media screen and (max-width: 576px) {
-    display: flex;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 105vw;
-    height: 100vh;
-    left: -3vw;
-    background-color: gray;
-
-  }
+.btn {
+  color: var(--text);
+  background-color: var(--primary);
+  padding: 0.4rem 1.5rem;
+  border-radius: var(--rounded-border);
+  border: var(--secondary) 1.5px solid !important;
 }
 
-.nav-btn-open{
-  @media screen and (max-width: 576px) {
-    position: fixed;
-    right: 5vw;
-    bottom: 35vh;
-    z-index: 100;
-  }
+.btn:hover{
+  background-color: var(--primary);
+
 }
 
-@media screen and (max-width: 576px) {
-  .hide{
-    display: none !important;
-  }
+.draws{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.3rem;
+}
+
+.draw{
+  position: relative;
+  z-index: 0;
+}
+.draw figcaption{
+  position: absolute;
+  bottom: 0;
+  padding: 0.3rem;
+  color: var(--text);
+}
+.draw img{
+  aspect-ratio: 1/1.30;
+  object-fit: cover;
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.btn-portifolio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block: 0.7rem;
+  position: absolute;
+  bottom: 43vh;
+  right: 1vw;
+  width: 3rem;
+  height: 3rem;
+}
+
+.btn-portifolio span{
+  display: none;
+  text-transform: uppercase;
+}
+
+.float-nav{
+  display: flex;
+  background: var(--secondary);
+  padding: 0.4rem 0.7rem;
+  height: 3rem;
+  border: var(--text) 1.5px solid;
+  border-radius: var(--rounded-border);
+  position: fixed;
+  bottom: 5vh;
+  right: 30vw;
+  z-index: 50;
+}
+
+.float-nav-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--rounded-border);
+}
+
+.float-nav-item.active{
+  background-color: var(--primary);
+}
+
+section{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  height: 90vh;
+}
+
+.about-profile{
+  position: relative;
+  width: 90vw;
+}
+
+.profile-pic{
+  position: relative;
+  border-radius: 50%;
+  z-index: 10;
+  border-bottom: var(--accent) 3px solid;
+}
+.profile-bg-clip{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary);
+  clip-path: polygon(50% 0, 90% 20%, 100% 69%, 74% 100%, 20% 91%, 0 51%, 40% 43%);
+  z-index: 1;
+}
+
+
+.about{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.about-btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block: 1.7rem;;
+}
+.about-btns .btn{
+  padding: 0.7rem 1.5rem;
+}
+
+.about-socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+}
+.about-socials .socials-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  border: var(--text) 1.5px solid;
+}
+
+.socials-item a i{
+  color: var(--text);
+}
+
+.about-text{
+  text-align: center;
+}
+
+.about-text h2 span:first-child{
+  color: var(--primary);
+}
+
+.about-text h2 span:last-child{
+  -webkit-text-stroke: 0.3px var(--text);
+  color: transparent;
 }

@@ -5,84 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ana Barbosa - Portifolio Artístico</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="/src/css/pico.min.css">
   <link rel="stylesheet" href="/src/css/main.css">
+  <link rel="stylesheet" href="/src/css/navbar.css">
 </head>
 <body>
-  <div class="container">
-    <nav>
+  <div id="portifolio"></div>
+
+  <div class="container-fluid navbar">
+    <nav class="container">
       <ul>
-        <li>ANA B.</li>
+        <li class="logo">ANA B.</li>
       </ul>
       <ul class="nav-btn-open mobile">
         <li><button class="menu-btn">&#9776;</button></li>
       </ul>
-      <ul class="nav-menu">
+      <ul class="nav-menu hide-nav">
         <li><a href="/">Início</a></li>
         <li><a href="/pages/portifolio.html">Portifolio</a></li>
         <li><a href="/pages/about.html">Sobre</a></li>
       </ul>
       <ul>
-        <li><a href="/pages/contact.html">Contato</a></li>
+        <li>
+          <a class="btn btn-contact" href="/pages/contact.html">
+            <span>Contato</span>
+          </a>
+        </li>
       </ul>
     </nav>
+  </div>
 
+  <div class="container">
     <main>
-      <section id="portifolio">
-        <div class="draws">
-          <div class="draw">
-            <img src="/assets/images/draw-5.jpg" alt="">
-          </div>
-          <div class="draws-col">
-            <div class="draw">
-              <img src="/assets/images/draw-3.jpg" alt="">
-            </div>
-            <div class="draw">
+      <section>
+        <div class="portifolio">
+          <div class="draws">
+            <figure class="draw">
+              <img src="/assets/images/draw-5.jpg" alt="">
+              <figcaption>Paimon</figcaption>
+            </figure>
+            <figure class="draw">
               <img src="/assets/images/draw-2.jpg" alt="">
-            </div>
+              <figcaption>Falling in Love</figcaption>
+            </figure>
+            <figure class="draw">
+              <img src="/assets/images/draw-3.jpg" alt="">
+              <figcaption>Buneco Anime</figcaption>
+            </figure>
+            <figure class="draw">
+              <img src="/assets/images/draw-4.jpg" alt="">
+              <figcaption>Dante</figcaption>
+            </figure>
+            <figure class="draw">
+              <img src="/assets/images/draw-1.jpg" alt="">
+              <figcaption>Abbys</figcaption>
+            </figure>
+            <figure class="draw">
+              <img src="/assets/images/draw-6.png" alt="">
+              <figcaption>Biblicamente Correto</figcaption>
+            </figure>
           </div>
-          <div class="draw">
-            <img src="/assets/images/draw-4.jpg" alt="">
-          </div>
-          <a href="/pages/portifolio.html">-></a>
+          <a class="btn btn-portifolio" href="/pages/portifolio.html">
+            <span>Veja Mais</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </section>
 
-      <section id="about">
+      <div id="about"></div>
+      <section>
         <div class="about grid">
           <div class="about-text">
             <h1>Ana Barbosa</h1>
-            <h2>Artista Digital</h2>
+            <h2>
+              <span>Artista</span>
+              <span>Digital</span>
+            </h2>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi inventore ducimus labore quae veniam dolor repellat officiis dignissimos cupiditate dicta quis sit beatae maxime necessitatibus et, molestiae qui est quos.
             </p>
-            <a href="/pages/about.html">Ver Mais</a>
+            <div class="about-btns">
+              <div><a class="btn" href="/pages/about.html">Ver Mais</a></div>
+              <div><a class="btn" href="">Contate-me</a></div>
+            </div>
+            <div class="about-socials">
+              <div class="socials-item">
+                <a href="https://instagram.com/nokixty" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+              <div class="socials-item">
+                <a href="https://lindekedin.com/dev-ana-barbosa/" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
+              <div class="socials-item">
+                <a href="mailto:anael.noki@gmail.com">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+            </div>
           </div>
           <div class="about-profile">
-            <img src="/assets/images/pfp.jpg" alt="Foto da Artista">
-            <ul>
-              <li><a href="https://instagram.com/nokixty" target="_blank">Icon</a></li>
-              <li><a href="https://x.com/nokixty/" target="_blank">Icon</a></li>
-              <li><a href="mailto:anael.noki@gmail.com">Icon</a></li>
-            </ul>
-            <a href="/pages/contact.html">CONTATE-ME</a>
+            <img class="profile-pic" src="/assets/images/pfp.png" alt="Foto da Artista">
+            <div class="profile-bg-clip">
+            </div>
           </div>
         </div>
       </section>
 
     </main>
+
     <nav class="float-nav">
       <ul>
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
+        <li class="float-nav-item">
+          <a href="#portifolio">Portifolio</a>
+        </li>
+        <li class="float-nav-item">
+          <a href="#about">Sobre</a>
+        </li>
       </ul>
     </nav>
-    <footer>
-      <ul>
-        <li><i>Todos os direitos reservados</i></li>
-      </ul>
-    </footer>
   </div>
+
+  <footer class="container-fluid">
+    <div class="container">
+      <div class="footer-text">Todos os direitos reservados.</div>
+    </div>
+  </footer>
 </body>
 <script src="/src/js/menu.js"></script>
+<script src="/src/js/float-nav.js"></script>
 </html>

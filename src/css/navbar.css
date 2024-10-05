@@ -54,7 +54,7 @@
 .logo{
   width: 7rem;
   height: 3rem;
-  mask: url(/assets/svg/logo.svg) no-repeat center;
+  mask: url(../../assets/svg/logo.svg) no-repeat center;
   mask-size: contain;
   background: var(--text);
 }

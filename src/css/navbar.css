@@ -6,7 +6,11 @@
   background-color: var(--background);
   border-bottom: 1px solid var(--text);
   margin-bottom: 1rem;
-  z-index: 80;
+  @media screen and (min-width: 1024px) {
+    position: sticky;
+    top: 0;
+    z-index: 80;
+  }
 }
 
 .nav-menu {
@@ -48,10 +52,13 @@
 }
 
 .logo{
-  font-family: 'Inter';
-  font-weight: 900;
-  font-size: 1.3rem;
+  width: 7rem;
+  height: 3rem;
+  mask: url(/assets/svg/logo.svg) no-repeat center;
+  mask-size: contain;
+  background: var(--text);
 }
+
 
 @media screen and (max-width: 576px) {
   .hide-nav{

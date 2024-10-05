@@ -2,22 +2,27 @@
 @import url('https://fonts.googleapis.com/css?family=Inter:700|Poppins:400');
 
 :root{
-  --text: #e7e7ef;
-  --background: #020203;
-  --background-secondary: #020203c0;
-  --primary: #4952a7;
-  --secondary: #21275e;
-  --accent: #2a3798;
-
   --rounded-border: 5rem;
-}
-:root[data-theme="ligth"] {
+  --white: #e7e7ef;
   --text: #101018;
   --background: #fcfcfd;
-  --background: #fcfcfdc0;
+  --background-secondary: #fcfcfdc0;
   --primary: #5862b6;
   --secondary: #a1a7de;
   --accent: #6774d5;
+  color-scheme: ligth;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root {
+    --text: #e7e7ef;
+    --background: #020203;
+    --background-secondary: #020203c0;
+    --primary: #4952a7;
+    --secondary: #21275e;
+    --accent: #2a3798;
+    color-scheme: dark;
+  }
 }
 
 
@@ -33,7 +38,7 @@ html, body {
   background-color: var(--background);
 }
 
-body {
+body{
   font-family: 'Poppins';
   font-weight: 400;
 }
@@ -41,6 +46,10 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: 'Inter';
   font-weight: 700;
+  color: var(--text);
+}
+p{
+  color: var(--text);
 }
 
 html {font-size: 100%;} /* 16px */
@@ -59,6 +68,12 @@ small {font-size: 0.833rem; /* 13.28px */}
 
 a {
   text-decoration: none;
+  color: var(--text);
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+span{
   color: var(--text);
 }
 
@@ -82,11 +97,11 @@ footer{
 }
 
 .btn {
-  color: var(--text);
+  color: var(--white);
   background-color: var(--primary);
   padding: 0.4rem 1.5rem;
   border-radius: var(--rounded-border);
-  border: var(--secondary) 1.5px solid !important;
+  border: var(--text) 1.5px solid !important;
 }
 
 .btn:hover{
@@ -94,10 +109,18 @@ footer{
 
 }
 
+.portifolio{
+  position: relative;
+}
+
 .draws{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.3rem;
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
 }
 
 .draw{
@@ -107,13 +130,33 @@ footer{
 .draw figcaption{
   position: absolute;
   bottom: 0;
-  padding: 0.3rem;
+  padding: 0.3rem 1rem;
   color: var(--text);
+  background: var(--background-secondary);
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
 }
 .draw img{
   aspect-ratio: 1/1.30;
   object-fit: cover;
-  mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  /* mask: -webkit-linear-gradient(top, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%); */
+  @media screen and (min-width: 1024px) {
+    mask: none;
+    aspect-ratio: 1/1.05;
+    &:hover{
+      z-index: 10;
+      transform: scale(1.05);
+      /* mask: -webkit-linear-gradient(top, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%); */
+      ~ figcaption{
+        display: block;
+      }
+    }
+  }
+}
+
+.draw.gray img {
+  filter: grayscale(100%);
 }
 
 .btn-portifolio{
@@ -123,8 +166,8 @@ footer{
   gap: 0.5rem;
   margin-block: 0.7rem;
   position: absolute;
-  bottom: 43vh;
-  right: 1vw;
+  bottom: 46%;
+  right: -3%;
   width: 3rem;
   height: 3rem;
 }
@@ -136,15 +179,19 @@ footer{
 
 .float-nav{
   display: flex;
-  background: var(--secondary);
-  padding: 0.4rem 0.7rem;
+  justify-content: center;
+  width: 100%;
   height: 3rem;
-  border: var(--text) 1.5px solid;
-  border-radius: var(--rounded-border);
   position: fixed;
   bottom: 5vh;
-  right: 30vw;
-  z-index: 50;
+  z-index: 10;
+}
+
+.float-nav-list{
+  background: var(--secondary);
+  padding: 0.4rem 0.2rem;
+  border: var(--text) 1.5px solid;
+  border-radius: var(--rounded-border);
 }
 
 .float-nav-item{
@@ -152,7 +199,7 @@ footer{
   align-items: center;
   justify-content: center;
   width: 7rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: var(--rounded-border);
 }
 
@@ -164,19 +211,44 @@ section{
   display: flex;
   align-items: start;
   justify-content: center;
-  height: 90vh;
+  margin-bottom: 3.5rem;
+}
+
+.about{
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: 70%;
+  }
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+  }
 }
 
 .about-profile{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  width: 90vw;
+  width: 100%;
+  @media screen and (min-width: 1024px) {
+    width: 50%;
+  }
 }
 
 .profile-pic{
   position: relative;
-  border-radius: 50%;
-  z-index: 10;
+  border-radius: 70%;
   border-bottom: var(--accent) 3px solid;
+  z-index: 2;
+}
+.profile-bg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .profile-bg-clip{
   position: absolute;
@@ -185,14 +257,12 @@ section{
   width: 100%;
   height: 100%;
   background-color: var(--secondary);
-  clip-path: polygon(50% 0, 90% 20%, 100% 69%, 74% 100%, 20% 91%, 0 51%, 40% 43%);
+  clip-path:polygon(50% 0, 90% 20%, 100% 69%, 74% 100%, 20% 91%, 0 51%, 40% 43%);
   z-index: 1;
-}
-
-
-.about{
-  display: flex;
-  flex-direction: column-reverse;
+  @media screen and (min-width: 1024px) {
+    height: 50%;
+    top: 15%;
+  }
 }
 
 .about-btns{
@@ -200,10 +270,7 @@ section{
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  margin-block: 1.7rem;;
-}
-.about-btns .btn{
-  padding: 0.7rem 1.5rem;
+  margin-block: 1.7rem;
 }
 
 .about-socials{
@@ -221,14 +288,21 @@ section{
   font-size: 1.5rem;
   border-radius: 50%;
   border: var(--text) 1.5px solid;
-}
-
-.socials-item a i{
   color: var(--text);
 }
 
 .about-text{
   text-align: center;
+  align-content: center;
+  @media screen and (min-width: 1024px) {
+    width: 50%;
+    h1{
+      font-size: 5rem;
+    }
+    h2{
+      font-size: 3.5rem;
+    }
+  }
 }
 
 .about-text h2 span:first-child{
@@ -236,6 +310,10 @@ section{
 }
 
 .about-text h2 span:last-child{
-  -webkit-text-stroke: 0.3px var(--text);
+  -webkit-text-stroke: 1px var(--text);
   color: transparent;
+}
+
+.footer-text{
+  text-align: center;
 }

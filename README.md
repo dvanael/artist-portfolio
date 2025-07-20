@@ -22,7 +22,7 @@ O projeto pode ser acessado em [dvanael.github.io/artist-portfolio](https://dvan
 ## Tecnologias Utilizadas
 
 ![HTML](https://img.shields.io/badge/-HTML5-0d1117?style=for-the-badge&logo=html5&logoColor)
-![CSS3](https://img.shields.io/badge/-CSS3-0d1117?style=for-the-badge&logo=css3&logoColor=blue)
+![CSS3](https://img.shields.io/badge/-CSS3-0d1117?style=for-the-badge&logo=css&logoColor=blue)
 ![Pico](https://img.shields.io/badge/-✨Pico-0d1117?style=for-the-badge&logo=pico&logoColor)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-0d1117?style=for-the-badge&logo=javascript&logoColor)
 ![Figma](https://img.shields.io/badge/-Figma-0d1117?style=for-the-badge&logo=figma&logoColor)
@@ -33,15 +33,13 @@ O projeto pode ser acessado em [dvanael.github.io/artist-portfolio](https://dvan
 
 Para me ajudar com a escolha da paleta de cores do website, usei o [RealtimeColors](https://www.realtimecolors.com/) criado pela [juxtopposed](https://github.com/juxtopposed). O RealtimeColors gera um paleta de cores e permite que você visualize uma prévia do website com as cores.
 
-
 | Cor               | Modo Claro  | Modo Escuro |
 | ----------------- | ----------- | ----------- |
-| Text       | ![#101018](https://via.placeholder.com/10/101018?text=+) #101018 | ![#e7e7ef](https://via.placeholder.com/10/e7e7ef?text=+) #e7e7ef |
-| Background | ![#fcfcfd](https://via.placeholder.com/10/fcfcfd?text=+) #fcfcfd | ![#020203](https://via.placeholder.com/10/020203?text=+) #020203 |
-| Primary    | ![#5862b6](https://via.placeholder.com/10/5862b6?text=+) #5862b6 | ![#4952a7](https://via.placeholder.com/10/4952a7?text=+) #4952a7 |
-| Secondary  | ![#a1a7de](https://via.placeholder.com/10/a1a7de?text=+) #a1a7de |![#21275e](https://via.placeholder.com/10/21275e?text=+) #21275e |
-| Accent     | ![#6774d5](https://via.placeholder.com/10/6774d5?text=+) #6774d5 | ![#2a3798](https://via.placeholder.com/10/2a3798?text=+) #2a3798 |
-
+| Branco       | ![#101018](https://placehold.co/20x20/101018/101018) #101018 | ![#e7e7ef](https://placehold.co/20x20/e7e7ef/e7e7ef) #e7e7ef |
+| Preto        | ![#fcfcfd](https://placehold.co/20x20/fcfcfd/fcfcfd) #fcfcfd | ![#020203](https://placehold.co/20x20/020203/020203) #020203 |
+| Azul         | ![#5862b6](https://placehold.co/20x20/5862b6/5862b6) #5862b6 | ![#4952a7](https://placehold.co/20x20/4952a7/4952a7) #4952a7 |
+| Azul Pastel  | ![#a1a7de](https://placehold.co/20x20/a1a7de/a1a7de) #a1a7de | ![#21275e](https://placehold.co/20x20/21275e/21275e) #21275e |
+| Azul Pastel  | ![#6774d5](https://placehold.co/20x20/6774d5/6774d5) #6774d5 | ![#2a3798](https://placehold.co/20x20/2a3798/2a3798) #2a3798 |
 
 ---
 

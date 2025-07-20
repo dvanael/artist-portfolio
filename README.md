@@ -35,11 +35,11 @@ Para me ajudar com a escolha da paleta de cores do website, usei o [RealtimeColo
 
 | Cor               | Modo Claro  | Modo Escuro |
 | ----------------- | ----------- | ----------- |
-| Branco       | ![#101018](https://placehold.co/20x20/101018/101018) #101018 | ![#e7e7ef](https://placehold.co/20x20/e7e7ef/e7e7ef) #e7e7ef |
-| Preto        | ![#fcfcfd](https://placehold.co/20x20/fcfcfd/fcfcfd) #fcfcfd | ![#020203](https://placehold.co/20x20/020203/020203) #020203 |
-| Azul         | ![#5862b6](https://placehold.co/20x20/5862b6/5862b6) #5862b6 | ![#4952a7](https://placehold.co/20x20/4952a7/4952a7) #4952a7 |
-| Azul Pastel  | ![#a1a7de](https://placehold.co/20x20/a1a7de/a1a7de) #a1a7de | ![#21275e](https://placehold.co/20x20/21275e/21275e) #21275e |
-| Azul Pastel  | ![#6774d5](https://placehold.co/20x20/6774d5/6774d5) #6774d5 | ![#2a3798](https://placehold.co/20x20/2a3798/2a3798) #2a3798 |
+| Texto       | ![#101018](https://placehold.co/20x20/101018/101018) #101018 | ![#e7e7ef](https://placehold.co/20x20/e7e7ef/e7e7ef) #e7e7ef |
+| Background        | ![#fcfcfd](https://placehold.co/20x20/fcfcfd/fcfcfd) #fcfcfd | ![#020203](https://placehold.co/20x20/020203/020203) #020203 |
+| Primária         | ![#5862b6](https://placehold.co/20x20/5862b6/5862b6) #5862b6 | ![#4952a7](https://placehold.co/20x20/4952a7/4952a7) #4952a7 |
+| Secundária  | ![#a1a7de](https://placehold.co/20x20/a1a7de/a1a7de) #a1a7de | ![#21275e](https://placehold.co/20x20/21275e/21275e) #21275e |
+| Acentuada  | ![#6774d5](https://placehold.co/20x20/6774d5/6774d5) #6774d5 | ![#2a3798](https://placehold.co/20x20/2a3798/2a3798) #2a3798 |
 
 ---
 
